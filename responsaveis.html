@@ -133,7 +133,6 @@
             </ul>
           </nav>
         </div>
-
       </div>
       <!-- /top navigation -->
 
@@ -142,36 +141,18 @@
       <div class="right_col" role="main">
 		
 		<div class="row">
-			<a href="#">Relatórios</a>
+			<a href="#">Perfil</a>
 			<i class="fa fa-angle-double-right"></i>
-			<a href="relatorios.html">Consultar</a>
+			<a href="relatorios.html">Responsáveis</a>
 		</div>
 		
-        <!-- top tiles -->
-        <div class="row tile_count">
-          <div class="animated flipInY col-md-2 tile_stats_count">
-            <div class="left"></div>
-            <div class="right">
-              <span class="count_top"><i class="fa fa-stethoscope"></i> Média Batimentos</span>
-              <div class="count">90/min</div>
-            </div>
-          </div>
-          <div class="animated flipInY col-md-2 tile_stats_count">
-            <div class="left"></div>
-            <div class="right">
-              <span class="count_top"><i class="fa fa-medkit"></i> Média Temperatura</span>
-              <div class="count">36.5º</div>
-            </div>
-          </div>          
-        </div>
-        <!-- /top tiles -->
+		<br />
 		
-		<div class="row">
-		
+		<div class="row">		
 			<div class="col-md-12 col-sm-12 col-xs-12">
 				<div class="x_panel">
 					<div class="x_title">
-					  <h2>Filtros</h2>
+					  <h2>Responsáveis</h2>
 					  <ul class="nav navbar-right panel_toolbox" style="min-width: 24px;">
 						<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
 						</li>
@@ -180,82 +161,102 @@
 					</div>
 					<div class="x_content">
 					  <br />
-					  <form id="demo-form1" data-parsley-validate class="form-horizontal form-label-left">
-						<div class="col-md-5 col-sm-6 col-xs-12 form-group has-feedback">
-						  <input type="text" class="form-control" id="dtInicial" placeholder="Data Inicial">
+					  <form id="form" data-parsley-validate class="form-horizontal form-label-left">
+						<div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+						  <input type="text" class="form-control" id="nome" placeholder="Nome">
 						</div>
-						<div class="col-md-5 col-sm-6 col-xs-12 form-group has-feedback">
-						  <input type="text" class="form-control" id="dtFinal" placeholder="Data Final">
+						<div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+						  <input type="text" class="form-control" id="sobrenome" placeholder="Sobrenome">
 						</div>
-						<div class="col-md-2 col-sm-6 col-xs-12 form-group has-feedback">
-						  <button type="btnFiltrar" class="btn btn-primary" style="width:100%;">Filtrar</button>
+						<div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+						  <input type="text" class="form-control" id="email" placeholder="E-Mail">
 						</div>
+						<div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+						  <input type="text" class="form-control" id="telefone" placeholder="Telefone">
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+						  <input type="text" class="form-control" id="dtInicial" placeholder="Usuário Sistema">
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+						  <input type="text" class="form-control" id="dtFinal" placeholder="Senha Sistema">
+						</div>
+						<div class="col-md-12 col-sm-6 col-xs-12 form-group has-feedback">
+						  <button type="btnFiltrar" class="btn btn-primary" style="width:100%;">Adicionar</button>
+						</div>
+						
+						<br />
+						
+						<table class="table table-bordered">
+							<thead>
+							  <tr>
+								<th width="30%">Nome</th>
+								<th width="30%">Usuário</th>
+								<th width="30%">Senha</th>
+								<th width="10%">Ações</th>
+							  </tr>
+							</thead>
+							<tbody>
+							  <tr>
+								<td>Matheus</td>
+								<td>matheus</td>
+								<td>123456</td>
+								<td align="center">
+									<a href="#/editar"> <i class="fa fa-edit"></i> </a>
+									<a href="#/excluir" data-toggle="modal" data-target=".modalExcluir"> <i class="fa fa-close"></i> </a>
+								</td>
+							  </tr>
+							  <tr>
+								<td>Khalil</td>
+								<td>khalil</td>
+								<td>123456</td>
+								<td align="center">
+									<a href="#/editar"> <i class="fa fa-edit"></i> </a>
+									<a href="#/excluir" data-toggle="modal" data-target=".modalExcluir"> <i class="fa fa-close"></i> </a>
+								</td>
+							  </tr>
+							  <tr>
+								<td>José</td>
+								<td>jose</td>
+								<td>123456</td>
+								<td align="center">
+									<a href="#/editar"> <i class="fa fa-edit"></i> </a>
+									<a href="#/excluir" data-toggle="modal" data-target=".modalExcluir"> <i class="fa fa-close"></i> </a>
+								</td>
+							  </tr>
+							</tbody>
+						  </table>
+						  <div class="col-md-12 col-sm-6 col-xs-12 form-group has-feedback">
+							<button type="btnSalvar" class="btn btn-primary" style="width:100%;">Salvar</button>
+						  </div>
 					  </form>
 					</div>                  
 				</div>
             </div>
 		</div>
 		
-		<div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-              <div class="x_panel">
-                <div class="x_title">
-                  <h2>Batimento Cardíaco <small>Média de batimentos por dia </small></h2>
-                  <ul class="nav navbar-right panel_toolbox" style="min-width: 24px;">
-                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                    </li>
-                  </ul>
-                  <div class="clearfix"></div>
-                </div>
-                <div class="x_content">
-                  <br />
-                  <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
-
-                    <div class="demo-container" style="height:250px">
-                    <div id="placeholder3xx3" class="demo-placeholder" style="width: 100%; height:250px;"></div>
-                  </div>
-
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-		  
-		 <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-              <div class="x_panel">
-                <div class="x_title">
-                  <h2>Temperatura Corporal  <small>Média de temperatura por dia </small></h2>
-                  <ul class="nav navbar-right panel_toolbox" style="min-width: 24px;">
-                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                    </li>
-                  </ul>
-                  <div class="clearfix"></div>
-                </div>
-                <div class="x_content">
-                  <br />
-                  <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
-
-                    <div class="demo-container" style="height:250px">
-                    <div id="GraficoTemp" class="demo-placeholder" style="width: 100%; height:250px;"></div>
-                  </div>
-
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        <div class="row">
-        </div>
-        <br />
-
-        <div class="row">
+		<!-- Modal -->
+		
+		<div class="modal fade modalExcluir" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">		
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+						</button>
+						<h4 class="modal-title" id="myModalLabel">Exclusão</h4>
+					</div>
+					<div class="modal-body">
+						<h4>Deseja confirmar a exclusão?</h4>
+						<p> Um responsável será excluído. Confirmar exclusão? </p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+						<button type="button" class="btn btn-primary">Salvar</button>
+					</div>		
+				</div>
+			</div>
         </div>
 		
-        <div class="row">         
-
-        </div>
+		<!-- Modal -->
 
         <!-- footer content -->
 
